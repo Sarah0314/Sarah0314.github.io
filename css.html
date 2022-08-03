@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--自動抓取各裝置版面-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>backgroud position calc</title>
+    <style>
+        .emText { color:rgb(235, 87, 18);}
+        .linda { color:rgb(238, 143, 20);}
+        .mary {color:rgb(228, 105, 64)}
+        .paul {color:burlywood}
+        #latest {color:rgb(156, 36, 36)}
+
+        /*我是CSS的註解*/
+        *{color:rgb(214, 67, 14)}/*通用選擇器*/
+        h1,h2,h3,h4,h5,h6{
+        font-family: 'Noto Sans TC' ,sans-serif;
+        color:coral;
+        }/*有被標籤到的，則套用自身標籤，否則一律套用通用選擇器*/
+        p,a,span,li,label{
+          font-family:  'Open Sans', sans-serif;
+          color:rgba(233, 62, 133, 0.986)
+
+        }
+        /*Attribute selectors（屬性選擇器） 針對有套⽤特定屬性的標籤做 CSS 設定*/
+        div {color:black;} 
+        div[title] {color:red;} 
+        div[title=fishbecat] {color:green;} 
+        div[title~=fishbecat’s] {color:blue;}
+
+        /*Descendant combinator（後代選擇器）
+         E F，利⽤空⽩鍵區隔兩個元素，表⽰在 E 元素內的 F 元素才會套⽤*/
+         a { color:black;} 
+         h1 a { color:red;} 
+         #wrapper a { color:green;}
+
+         /*Child combinator（⼦選擇器）
+         E > F，利⽤>區隔兩個元素，表⽰在有⽗⼦關係的元素才會套⽤與後代不同的是 
+         E 及 F 元素之間不能再插⼊其它的元素，否則就不是⽗⼦關係了 */
+         article > p{color:blue;} 
+         .mary > p{color:blueviolet;} 
+         #wa > p{color:aqua;}
+
+         /*Adjacent sibling combinator（同層相鄰選擇器） 
+         E + F，利⽤+區隔兩個元素，表⽰在與 E 同⼀層關係的相鄰 F 元素才會套⽤*/
+         h1 { color:red;} 
+         h1 + p { color:green;}
+
+         /*Groups of selectors（群組選擇器）
+         您還可以⽤「,」逗點區隔，同時對多個選擇器定義樣式
+         E, F, G，同時針對 E、F、G 元素設定樣式*/
+         h1, h2, p {color:red;}
+
+         /*CSS Statement 的⽂字篇*/
+         p{color:rgba(252,186,3,0.8); 
+         font-size:40px; /*字體⼤⼩px or em都可*/
+         letter-spacing: 10px; /*字距*/
+         line-height: 1.5; /*行距1.5 or 20px*/
+         font-weight: 500; /*粗細度(100-900)*/
+         text-align:right; /*文字對應( align left/center/right text-align:right)*/
+         font-family: '標楷體', sans-serif;  } /*轉字型*/
+         div { 
+         font-family:Arial,'Times New  Roman','Microsoft YaHei',SimHei; font:bold  12px/0.75em Arial,'Times New Roman','Microsoft  YaHei',SimHei; 
+         font-size:40px; 
+         line-height: 1.5; 
+         } 
+  
+         /*全部設定字體*/ 
+         body { font-family: verdana, Times  New Roman, 新細明體, 微軟正⿊體; }
+
+         /*測試邊框寬度效果*/
+         div{ 
+         background : red; 
+         width : 200px; 
+         height : 200px; 
+         overflow:hidden; 
+         border:5px solid black;  padding:50px 10px 20px 40px;  margin:50px; 
+         }
+
+
+
+
+
+
+
+
+
+
+
+      
+    </style>
+</head>
+<body>
+    <li><span>
+          <a herf="'portfolio.html" target="_blank">See my portfolio</a>
+          </span></li>
+        <h1>See my portfo</h1>
+    </span></li>
+    <p class="emText">我是emText</p>
+    <!--最靠近class的為優先-->
+     <p class="linda mary">123</p>
+     <p class="linda ">123</p>
+     <p class="linda ">123</p>
+     <p id="latest">此段會套用紅色</p>
+
+    <!--Attribute selectors（屬性選擇器） 針對有套⽤特定屬性的標籤做 CSS 設定-->
+     <div> 此區塊會套⽤⿊⾊</div> 
+     <div title="blog"> 此區塊會套⽤紅⾊</div>
+     <div title="fishbecat"> 此區塊會套⽤綠⾊ </div> 
+     <div title="fishbecat’s blog">此區塊會套⽤藍 ⾊</div>
+
+    <!--Descendant combinator（後代選擇器）
+     E F，利⽤空⽩鍵區隔兩個元素，表⽰在 E 元素內的 F 元素才會套⽤-->
+     <a> 只設定 a 標籤會套⽤⿊⾊</a> 
+     <h1> 
+     <a>在 h1 裡的 a 標籤會套⽤紅⾊</a> 
+     </h1> 
+     <div id="wrapper">
+     <a>在 ID=wrapper 裡的 a 標籤會套⽤綠⾊ </a> 
+    </div>
+    
+    <!--Child combinator（⼦選擇器）
+     E > F，利⽤>區隔兩個元素，表⽰在有⽗⼦關係的元素才會套⽤與後代不同的是 
+     E 及 F 元素之間不能再插⼊其它的元素，否則就不是⽗⼦關係了-->
+     <article> 
+        <p>PPPPPPPPPP</p>  
+    </article> 
+        <p>AAAAAAAAAAA</p> 
+        <div class="mary"> 
+        <p>Mary</p> 
+        </div> 
+        <div id="wa"> 
+        <p>WA</p> 
+        </div>
+       
+    <!--Adjacent sibling combinator（同層相鄰選擇器） 
+    E + F，利⽤+區隔兩個元素，表⽰在與 E 同⼀層關係的相鄰 F 元素才會套⽤-->
+     <h1>標題 1 會套⽤紅⾊</h1> 
+     <p>跟 h1 相鄰的 p 會套⽤綠⾊</p> 
+     <p>沒有跟 h1 相鄰的 p 會套⽤預設值</p>
+
+     <!--Groups of selectors（群組選擇器）
+     您還可以⽤「,」逗點區隔，同時對多個選擇器定義樣式
+     E, F, G，同時針對 E、F、G 元素設定樣式-->
+     <h1>群組內的元素都套⽤紅⾊</h1> 
+     <h2>群組內的元素都套⽤紅⾊</h2> 
+     <p>群組內的元素都套⽤紅⾊</p> 
+     <a>群組沒定義的元素不會變⾊</a>
+
+     <!--CSS Statement 的⽂字篇-->
+     <p>天氣很好</p> 
+     <p>Hello</p> 
+     <div>HHHHHHHHHHHHHHHHHHH</div>  <div>我我我我我我我我我我</div> 
+      <!--個別設定字體-->
+     <div><span style="font-family:  verdana, Times New Roman, 新細明體, 微軟正 ⿊體;">設定字型</span></div> 
+     哈哈哈
+
+     <!--測試邊框寬度效果-->
+     <div>HHHHHHHHHHHHHHHHHHH</div>  <div>我我我我我我我我我我</div>  <div style="border 
+     color:#aaaaee;border-style:solid;border width:3px;padding:5px;"> 
+     測試邊框寬度效果 
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
