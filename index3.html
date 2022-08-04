@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/77e33fd679.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="css/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>E.Y.L 帶你趣遊台灣</title>
+    <style>
+        h1, h2 {color:rgb(243, 141, 8);}
+        p {color:rgb(31, 29, 27);}
+        /*游標移過去後圖片放大效果*/
+        ..box{
+         width: 100px;
+        height: 100px;
+        background: #aaa;
+        overflow: hidden;
+        }
+        img{
+        transition: .5s;
+        }
+       .box:hover img{
+       transform: scale(1.2);
+        }
+       .cover-fit{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       }
+       
+    </style>
+</head>
+
+<body>
+  <header>
+  <div class="container">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="pictures/pictures/logo.jpg">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              景點風格
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="">台灣山海秘境</a>
+                <ul>
+                    <li><a class="dropdown-item" href="index3.html">阿里山小火車</a></li>
+                </ul>
+                <ul>
+                    <li><a class="dropdown-item" href="index4.html">清風濤月</a></li>
+                </ul>
+
+              </li>
+              <li><a class="dropdown-item" href="">台灣文青之旅</a>
+                <ul>
+                    <li><a class="dropdown-item" href="index2.html">檜意森活村</a></li>
+                </ul>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="">台灣美食</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">聯絡我們</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+       </div>
+     </div>
+     </nav>
+     </div>
+  </header>
+
+  <!--旋轉木馬圖片-->
+   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="pictures/pictures/12.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="pictures/pictures/13.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="pictures/pictures/15.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+  
+    <!--內容簡介區塊-->
+    <section id='latest'>       
+        <div class="container">
+          <div class='row'>
+          <div class='col-md-12 text-center'>
+            <H1>阿里山小火車</H1>
+            <!--內容-->
+             <div class='row'>
+              <div class='col-md-12 text-left'>
+                    <div class='upper'>
+                     <p align="left">阿里山林業鐵路為臺灣唯一營運的高山林業鐵路系統，亦是臺灣第一個重要文化景觀。
+                        該鐵路乃是日治時代為了將阿里山林場產出之林木向外輸送而建設；林場砍伐業務結束後，客運與觀光成該鐵路的主要功能。
+                        整個系統主要有一條起點自嘉義市嘉義車站、終點在嘉義縣阿里山鄉阿里山車站的主線，以及眾多遍佈阿里山山區的林場線所構成。
+                        今日開放客運的部分，包括主線及其部分區間的「神木線」、「沼平線」、一條為觀日而修築的「祝山線」。
+                        阿里山林鐵尚有幾條「林場線」是以眠月及東埔兩線為主幹分歧出的幾條支線，不過幾乎已經停用廢棄。
+                     </p>
+                     <p align="left">而今天要帶各位去的是觀日的『祝山線』，為配合每日的日出時間，阿里山車站會於前一日公告發車時間並預售車票。
+                        從阿里山站開始沿途會經過沼平站、十字分道站、對高岳站及終點祝山站，
+                        但祝山站目前配合車站改建工程，暫時停止載客服務，預計於2022年底改建完成。
+                        目前只行駛到對高岳站，若想到祝山站欣賞更好的觀日風景，需自行徒步30分鐘才會到達。
+                      </p>
+                    </div>
+              </div>
+              <!--相片-->
+                <div class='col-md-12 text-left'>
+                  <div class='outer'>
+                    <a href='https://afrch.forest.gov.tw/0000275'>
+                      <div class='upper'>
+                        <div class="box">
+                            <img class="cover-fit" src="pictures/pictures/14.jpg" alt="">
+                          </div>
+                      </div>
+                      <div class='lower'>
+                        <h6 align="right">資料來源：阿里山林業鐵路官網<a href='https://afrch.forest.gov.tw/0000275'></a></h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+      <div>
+      </div>
+    </section>
+   
+   
+</body> 
